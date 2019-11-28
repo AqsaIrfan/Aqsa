@@ -1,0 +1,53 @@
+#include <iostream>
+#include <string>>
+using namespace std;
+class Account {
+private:
+
+   std::string name;
+   int bal{ 0 };
+};
+public:
+	int bal=15000;
+   Account( std::string name, bal )
+   
+   void withdraw( int withdrawAmount ) {
+      if ( withdrawAmount > bal )
+         std::cout << "You dont have enough.\n";
+      if ( withdrawAmount <= bal )
+         bal = bal - withdrawAmount;
+   }
+	void deposit( int depositAmount ) {
+	      if ( depositAmount > 0 )
+	         bal = bal + depositAmount;
+	   }
+   int getBalance() const {
+      return balance;
+   }
+   
+   void setName( std::string Name ) {
+   }
+
+   std::string getName() const {
+      return name;
+   }
+
+int main() {
+
+   Account account( "Aqsa", 1500 );
+   cout << "Account  "<<endl<<"Name: " << account.getName() <<endl<< "balance: "<< account.getBalance();
+
+
+   int withdrawAmount;
+
+   cout << "\n\nEnter withdraw amount for account : ";
+   cin >> withdrawAmount;
+
+   account.withdraw( withdrawAmount );
+
+  cout << "Account  "<<endl<<"Name: " << account.getName() <<endl<< "balance: "
+      << account1.getBalance();
+   cout << "\n\nAccount "<<endl<<"Name: " << account.getName() << endl<<"balance: "<< account.getBalance();
+
+   return 0;
+}
